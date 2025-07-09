@@ -1,0 +1,25 @@
+package it.bribank.gestioneMutui.controller;
+
+import it.bribank.gestioneMutui.entity.Spread;
+import it.bribank.gestioneMutui.repository.SpreadRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/spread")
+@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+public class SpreadController {
+
+    @Autowired
+    private SpreadRepository spreadRepository;
+
+    // Endpoint per ottenere tutti i valori di Spread
+    @GetMapping
+    public List<Spread> getAll() {
+        return spreadRepository.findAll();
+    }
+
+}
