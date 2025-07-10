@@ -175,7 +175,7 @@ public class RichiestaMutuoController {
         }
 
         RichiestaMutuo richiesta = richiestaOpt.get();
-        RichiestaMutuoResponseDto dto = convertToDto(richiesta); // già hai questa funzione
+        RichiestaMutuoResponseDto dto = convertToDto(richiesta);
 
         // Recupera anche anagrafiche collegate
         if (richiesta.getIdIntestatario() != null) {
@@ -299,17 +299,30 @@ public class RichiestaMutuoController {
         responseDto.setStatoRichiesta(richiesta.getStatoRichiesta());
         responseDto.setValoreImmobile(richiesta.getValoreImmobile());
         responseDto.setRedditoFamiliareIc(richiesta.getRedditoFamiliareIc());
+        responseDto.setPosizioneLavorativaIn(
+                richiesta.getPosizioneLavorativaIn() != null
+                        ? richiesta.getPosizioneLavorativaIn().getId()
+                        : null);
+
+        responseDto.setPosizioneLavorativaCo(
+                richiesta.getPosizioneLavorativaCo() != null
+                        ? richiesta.getPosizioneLavorativaCo().getId()
+                        : null);
+
         responseDto.setComponentiNucleoFamiliareIc(richiesta.getComponentiNucleoFamiliareIc());
         responseDto.setValoreBeniImmobiliIc(richiesta.getValoreBeniImmobiliIc());
         responseDto.setValorePartecipazioneIc(richiesta.getValorePartecipazioneIc());
         responseDto.setUltimoIseeIc(richiesta.getUltimoIseeIc());
         responseDto.setRedditoFamiliareGa(richiesta.getRedditoFamiliareGa());
+        responseDto.setPosizioneLavorativaGa(
+                richiesta.getPosizioneLavorativaGa() != null
+                        ? richiesta.getPosizioneLavorativaGa().getId()
+                        : null);
         responseDto.setComponentiNucleoFamiliareGa(richiesta.getComponentiNucleoFamiliareGa());
         responseDto.setValoreBeniImmobiliGa(richiesta.getValoreBeniImmobiliGa());
         responseDto.setValorePartecipazioneGa(richiesta.getValorePartecipazioneGa());
         responseDto.setUltimoIseeGa(richiesta.getUltimoIseeGa());
         responseDto.setNoteRifiuto(richiesta.getNoteRifiuto());
-//        responseDto.setStato(richiesta.getStato());
         return responseDto;
     }
 

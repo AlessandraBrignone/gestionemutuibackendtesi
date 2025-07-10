@@ -30,6 +30,8 @@ public class RichiestaMutuoResponseDto {
 
     // Dati finanziari intestatario/cointestatario
     private Double redditoFamiliareIc;
+    private Long posizioneLavorativaIn;
+    private Long posizioneLavorativaCo;
     private Integer componentiNucleoFamiliareIc;
     private Double valoreBeniImmobiliIc;
     private Double valorePartecipazioneIc;
@@ -37,6 +39,7 @@ public class RichiestaMutuoResponseDto {
 
     // Dati finanziari garante
     private Double redditoFamiliareGa;
+    private Long posizioneLavorativaGa;
     private Integer componentiNucleoFamiliareGa;
     private Double valoreBeniImmobiliGa;
     private Double valorePartecipazioneGa;
@@ -229,6 +232,22 @@ public class RichiestaMutuoResponseDto {
         this.redditoFamiliareIc = redditoFamiliareIc;
     }
 
+    public Long getPosizioneLavorativaIn() {
+        return posizioneLavorativaIn;
+    }
+
+    public void setPosizioneLavorativaIn(Long posizioneLavorativaIn) {
+        this.posizioneLavorativaIn = posizioneLavorativaIn;
+    }
+
+    public Long getPosizioneLavorativaCo() {
+        return posizioneLavorativaCo;
+    }
+
+    public void setPosizioneLavorativaCo(Long posizioneLavorativaCo) {
+        this.posizioneLavorativaCo = posizioneLavorativaCo;
+    }
+
     public Integer getComponentiNucleoFamiliareIc() {
         return componentiNucleoFamiliareIc;
     }
@@ -267,6 +286,14 @@ public class RichiestaMutuoResponseDto {
 
     public void setRedditoFamiliareGa(Double redditoFamiliareGa) {
         this.redditoFamiliareGa = redditoFamiliareGa;
+    }
+
+    public Long getPosizioneLavorativaGa() {
+        return posizioneLavorativaGa;
+    }
+
+    public void setPosizioneLavorativaGa(Long posizioneLavorativaGa) {
+        this.posizioneLavorativaGa = posizioneLavorativaGa;
     }
 
     public Integer getComponentiNucleoFamiliareGa() {
