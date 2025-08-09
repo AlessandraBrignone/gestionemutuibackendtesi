@@ -12,6 +12,7 @@ public class PianoAmmortamento {
     private String numeroRata;
     private String quotaCapitale;
     private String quotaInteressi;
+    private String totaleRata;
     private String capitaleResiduo;
 
     public Long getId() {
@@ -52,6 +53,14 @@ public class PianoAmmortamento {
 
     public void setQuotaInteressi(String quotaInteressi) {
         this.quotaInteressi = quotaInteressi;
+    }
+
+    public String getTotaleRata() {
+        return totaleRata;
+    }
+
+    public void setTotaleRata(String totaleRata) {
+        this.totaleRata = totaleRata;
     }
 
     public String getCapitaleResiduo() {

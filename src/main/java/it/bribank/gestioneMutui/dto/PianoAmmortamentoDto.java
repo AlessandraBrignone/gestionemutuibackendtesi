@@ -27,6 +27,7 @@ public class PianoAmmortamentoDto {
         private String numeroRata;
         private String quotaCapitale;
         private String quotaInteressi;
+        private String totaleRata;
         private String capitaleResiduo;
 
         public Long getIdMutuo() {
@@ -59,6 +60,14 @@ public class PianoAmmortamentoDto {
 
         public void setQuotaInteressi(String quotaInteressi) {
             this.quotaInteressi = quotaInteressi;
+        }
+
+        public String getTotaleRata() {
+            return totaleRata;
+        }
+
+        public void setTotaleRata(String totaleRata) {
+            this.totaleRata = totaleRata;
         }
 
         public String getCapitaleResiduo() {
